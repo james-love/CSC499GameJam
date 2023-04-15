@@ -1,0 +1,65 @@
+.container {
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.text {
+    font-size: 150px;
+    color: rgb(255, 255, 255);
+    -unity-font-definition: url('project://database/Assets/Fonts/PlayfairDisplay-Regular%20SDF.asset?fileID=11400000&guid=e3f59ebb8aaaaf44dafdde0eab548890&type=2#PlayfairDisplay-Regular SDF');
+    -unity-font: url('project://database/Assets/Fonts/PlayfairDisplay-Regular.ttf?fileID=12800000&guid=92e9fcdca2980134791a48ad37a14dde&type=3#PlayfairDisplay-Regular');
+}
+
+.button {
+    font-size: 80px;
+    color: rgb(0, 0, 0);
+}
+
+.volume-control {
+    position: absolute;
+    left: 65px;
+    top: 65px;
+    flex-direction: column;
+}
+
+.resume-button {
+}
+
+.mute-button {
+    width: 100px;
+    height: 100px;
+    margin-right: 50px;
+}
+
+.volume-slider {
+    justify-content: center;
+}
+
+.mute-button-container {
+    flex-direction: row;
+    margin-bottom: 20px;
+}
+
+.volume-slider #unity-drag-container {
+    height: 100px;
+}
+
+.volume-slider #unity-dragger {
+    height: 100px;
+    width: 20px;
+}
+
+.volume-slider #unity-tracker {
+    height: 15px;
+    translate: 0 35px;
+}
+
+.pause-menu-buttons {
+    width: 460px;
+    margin-top: 25px;
+    height: 115px;
+    -unity-font: url('project://database/Assets/Fonts/PlayfairDisplay-Regular.ttf?fileID=12800000&guid=92e9fcdca2980134791a48ad37a14dde&type=3#PlayfairDisplay-Regular');
+    -unity-font-definition: url('project://database/Assets/Fonts/PlayfairDisplay-Regular%20SDF.asset?fileID=11400000&guid=e3f59ebb8aaaaf44dafdde0eab548890&type=2#PlayfairDisplay-Regular SDF');
+}

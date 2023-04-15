@@ -1,0 +1,16 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI%20Toolkit/PauseMenu/PauseMenu.uss?fileID=7433441132597879392&amp;guid=12488a2c901e16e4aaa2849afb7fb54c&amp;type=3#PauseMenu" />
+    <ui:VisualElement name="Container" class="container" style="background-color: rgba(65, 65, 65, 0.58);">
+        <ui:Label text="Paused" display-tooltip-when-elided="true" name="Text" class="text" />
+        <ui:Button text="Resume" display-tooltip-when-elided="true" name="Resume" class="button pause-menu-buttons" />
+        <ui:Button text="Main Menu" display-tooltip-when-elided="true" name="MainMenu" tabindex="2" class="button pause-menu-buttons" />
+        <ui:Button text="Quit" display-tooltip-when-elided="true" name="Quit" tabindex="3" class="button pause-menu-buttons" />
+    </ui:VisualElement>
+    <ui:VisualElement name="VolumeControls" class="volume-control">
+        <ui:VisualElement name="MuteButtons" class="mute-button-container">
+            <ui:Button display-tooltip-when-elided="true" name="MuteMusic" tabindex="4" class="button mute-button" style="background-image: url(&apos;project://database/Assets/UI%20Toolkit/UI%20Sprites/mute-icons.png?fileID=-1127768398&amp;guid=f5d2a7d07913e7b408707f194fee7060&amp;type=3#music-unmuted&apos;);" />
+            <ui:Button display-tooltip-when-elided="true" name="MuteSFX" tabindex="5" class="button mute-button" style="background-image: url(&apos;project://database/Assets/UI%20Toolkit/UI%20Sprites/mute-icons.png?fileID=-669566248&amp;guid=f5d2a7d07913e7b408707f194fee7060&amp;type=3#sfx-unmuted&apos;);" />
+        </ui:VisualElement>
+        <ui:Slider picking-mode="Ignore" value="0.5" high-value="1" name="VolumeLevel" tabindex="6" class="volume-slider" />
+    </ui:VisualElement>
+</ui:UXML>

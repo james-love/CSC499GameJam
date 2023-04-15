@@ -171,7 +171,19 @@ MonoBehaviour:
     m_ActionId: 06fd9239-30d7-4188-8f44-b5dfc618052b
     m_ActionName: NormalMovement/Interact[/Keyboard/f]
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: PauseMenu, GameJam
+        m_MethodName: Pause
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: d4a5d57d-3cb6-497f-a490-b01fa89ff010
     m_ActionName: NormalMovement/Pause[/Keyboard/escape]
   m_NeverAutoSwitchControlSchemes: 0
