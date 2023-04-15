@@ -2308,14 +2308,26 @@ MonoBehaviour:
     m_ActionId: e9441f2d-9d84-4fb0-8e14-17245c5885a9
     m_ActionName: NormalMovement/MeleeAttack[/Keyboard/q]
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: aca341cf-428c-4f32-b95d-5ec5fddb7560
     m_ActionName: NormalMovement/RangeAttack[/Keyboard/e]
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1931687250}
-        m_TargetAssemblyTypeName: Interact, GameJam
-        m_MethodName: InteractPressed
+      - m_Target: {fileID: 1931687257}
+        m_TargetAssemblyTypeName: RangeAttack, GameJam
+        m_MethodName: AttackPressed
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3247,6 +3259,7 @@ GameObject:
   - component: {fileID: 1931687253}
   - component: {fileID: 1931687252}
   - component: {fileID: 1931687251}
+  - component: {fileID: 1931687257}
   - component: {fileID: 1931687250}
   m_Layer: 0
   m_Name: Player
@@ -3387,6 +3400,19 @@ Rigidbody2D:
   m_SleepingMode: 0
   m_CollisionDetection: 1
   m_Constraints: 4
+--- !u!114 &1931687257
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1931687249}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b6b8b13630a79d418ffcf5c21c9a0a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackCooldown: 1.5
 --- !u!1 &2019302085
 GameObject:
   m_ObjectHideFlags: 0
