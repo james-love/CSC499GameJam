@@ -19,7 +19,6 @@ public class PlayerManager : MonoBehaviour
 
     [SerializeField] private UIDocument deathScreen;
 
-    public static PlayerManager Instance { get; private set; }
     [HideInInspector] public bool ShowHUD { get; set; }
 
     public int AdjustHealth(int adjustment)
@@ -52,27 +51,16 @@ public class PlayerManager : MonoBehaviour
 
     private void Awake()
     {
-        if (Instance == null)
+        healthContainer = gameObject.GetComponentInChildren<Image>();
+
+        for (int i = 0; i < maxHealth; i++)
         {
-            healthContainer = gameObject.GetComponentInChildren<Image>();
-
-            for (int i = 0; i < maxHealth; i++)
-            {
-                Image temp = Instantiate(healthContainer, gameObject.transform);
-                temp.rectTransform.position = new Vector3(temp.rectTransform.position.x + 175 + (125 * i), temp.rectTransform.position.y, temp.rectTransform.position.z);
-                healthImages.Add(temp);
-            }
-
-            ShowHUD = true; // TODO change back to false, enable somewhere else
-
-            //GameObject.FindGameObjectWithTag("Player").GetComponentInChildren<PlayerInput>().currentActionMap.Disable();
-            Instance = this;
-            DontDestroyOnLoad(gameObject);
+            Image temp = Instantiate(healthContainer, gameObject.transform);
+            temp.rectTransform.position = new Vector3(temp.rectTransform.position.x + 175 + (125 * i), temp.rectTransform.position.y, temp.rectTransform.position.z);
+            healthImages.Add(temp);
         }
-        else
-        {
-            Destroy(gameObject);
-        }
+
+        ShowHUD = true; // TODO change back to false, enable somewhere else
     }
 
     private void Update()

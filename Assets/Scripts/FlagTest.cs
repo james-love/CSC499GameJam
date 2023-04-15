@@ -6,7 +6,7 @@ public class FlagTest : Interactable
     private SpriteRenderer sprite;
     public override void Interact()
     {
-        PlayerState.Instance.AddFlag(flag);
+        Player.Instance.State.AddFlag(flag);
         sprite.color = Color.green;
     }
 
@@ -17,7 +17,7 @@ public class FlagTest : Interactable
 
     private void Start()
     {
-        if (PlayerState.Instance.State.Flags.Contains(flag))
+        if (Player.Instance.State.Current.Flags.Contains(flag))
             sprite.color = Color.green;
     }
 }

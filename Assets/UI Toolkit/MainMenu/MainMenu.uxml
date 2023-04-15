@@ -8,8 +8,15 @@
                 <ui:Button text="Continue" display-tooltip-when-elided="true" name="ContinueGame" class="button" />
                 <ui:Button display-tooltip-when-elided="true" name="DeleteGame" class="delete-button" />
             </ui:VisualElement>
-            <ui:Button text="Settings" display-tooltip-when-elided="true" name="Settings" class="button" />
+            <ui:Button text="Settings" display-tooltip-when-elided="true" name="Settings" class="button" style="display: none;" />
             <ui:Button text="Quit" display-tooltip-when-elided="true" name="QuitGame" class="button" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+    <ui:VisualElement name="ConfirmDelete" class="modal" style="display: none;">
+        <ui:Label text="Are you sure?" display-tooltip-when-elided="true" name="Label" class="confirm-question" />
+        <ui:VisualElement name="Buttons" class="confirmation-container">
+            <ui:Button text="Yes" display-tooltip-when-elided="true" name="ConfirmDelete" class="button" />
+            <ui:Button text="Cancel" display-tooltip-when-elided="true" name="CancelDelete" class="button" />
         </ui:VisualElement>
     </ui:VisualElement>
 </ui:UXML>

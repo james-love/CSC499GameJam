@@ -3,8 +3,7 @@ using UnityEngine;
 
 public class PlayerState : MonoBehaviour
 {
-    public static PlayerState Instance { get; private set; }
-    public SaveState State { get; private set; }
+    public SaveState Current { get; private set; }
     [HideInInspector] public bool AlwaysRun { get; private set; } = false;
 
     public void SetAlwaysRun(bool newValue)
@@ -15,60 +14,83 @@ public class PlayerState : MonoBehaviour
 
     public void AddAbility(Ability ability)
     {
-        if (!State.Abilities.Contains(ability))
+        if (!Current.Abilities.Contains(ability))
         {
-            State.Abilities.Add(ability);
+            Current.Abilities.Add(ability);
 
-            // TODO Logic to enable/disable sprites for animation
-            switch (ability)
-            {
-                case Ability.MeleeAttack:
-                    InputManager.Instance.EnableAction("MeleeAttack");
-                    break;
-                case Ability.RangeAttack:
-                    InputManager.Instance.EnableAction("RangeAttack");
-                    break;
-                case Ability.Jump:
-                    InputManager.Instance.EnableAction("Jump");
-                    break;
-                default:
-                    break;
-            }
+            EnableAbility(ability);
         }
     }
 
     public void AddFlag(Flag flag)
     {
-        if (!State.Flags.Contains(flag))
-            State.Flags.Add(flag);
+        if (!Current.Flags.Contains(flag))
+            Current.Flags.Add(flag);
+    }
+
+    public void SaveGame(int levelIndex, int spawnPoint)
+    {
+        Current.LevelIndex = levelIndex;
+        Current.SpawnPoint = spawnPoint;
+        PlayerPrefs.SetString("SavedGame", JsonUtility.ToJson(Current));
+    }
+
+    private void EnableAbility(Ability ability)
+    {
+        // TODO Logic to enable/disable sprites for animation
+        switch (ability)
+        {
+            case Ability.MeleeAttack:
+                Player.Instance.Input.EnableAction("MeleeAttack");
+                break;
+            case Ability.RangeAttack:
+                Player.Instance.Input.EnableAction("RangeAttack");
+                break;
+            case Ability.Jump:
+                Player.Instance.Input.EnableAction("Jump");
+                break;
+            default:
+                break;
+        }
     }
 
     private void Awake()
     {
-        if (Instance == null)
-        {
-            if (PlayerPrefs.HasKey("AlwaysRun"))
-                AlwaysRun = PlayerPrefs.GetInt("AlwaysRun") == 1;
+        if (PlayerPrefs.HasKey("AlwaysRun"))
+            AlwaysRun = PlayerPrefs.GetInt("AlwaysRun") == 1;
 
-            State = new() { LevelIndex = 2, SpawnPoint = 1, Abilities = new(), Flags = new() };
-
-            Instance = this;
-            DontDestroyOnLoad(gameObject);
-        }
-        else
-        {
-            Destroy(gameObject);
-        }
+        Current = LevelManager.Instance.IsContinuedGame ?
+            JsonUtility.FromJson<SaveState>(PlayerPrefs.GetString("SavedGame")) :
+            new() { LevelIndex = 2, SpawnPoint = 1, Abilities = new(), Flags = new() };
     }
 
     private void Start()
     {
-        foreach (GameObject point in GameObject.FindGameObjectsWithTag("SpawnPoint"))
+        if (LevelManager.Instance.IsContinuedGame)
         {
-            if (point.GetComponent<SpawnPoint>().SpawnPointIndex == 1)
+            foreach (GameObject point in GameObject.FindGameObjectsWithTag("SpawnPoint"))
             {
-                transform.position = point.transform.position;
-                break;
+                if (point.GetComponents<MonoBehaviour>().OfType<ISpawnPoint>().ToArray()?[0]?.SpawnPointIndex == Current.SpawnPoint)
+                {
+                    GameObject.FindGameObjectWithTag("Player").transform.position = point.transform.position;
+                    break;
+                }
+            }
+
+            foreach (Ability ability in Current.Abilities)
+            {
+                EnableAbility(ability);
+            }
+        } 
+        else
+        {
+            foreach (GameObject point in GameObject.FindGameObjectsWithTag("SpawnPoint"))
+            {
+                if (point.GetComponent<SpawnPoint>().SpawnPointIndex == 1)
+                {
+                    transform.position = point.transform.position;
+                    break;
+                }
             }
         }
     }

@@ -8,15 +8,30 @@ public class LevelManager : MonoBehaviour
     [SerializeField] private Animator wipeTransition;
     [SerializeField] private Animator circleTransition;
     [SerializeField] private RectTransform circleMask;
+    [SerializeField] private GameObject player;
     public static LevelManager Instance { get; private set; }
     public bool Loading { get; private set; }
+    public bool IsContinuedGame { get; private set; } = false;
 
     public void ReloadMainMenu()
     {
-        Destroy(PlayerManager.Instance.gameObject);
-        // Set menu music here?
+        Destroy(Player.Instance.gameObject);
+        // TODO Set menu music here?
 
         LoadLevel(0, wipeTransition);
+    }
+
+    public void ContinueGame()
+    {
+        IsContinuedGame = true;
+        SaveState savedGame = JsonUtility.FromJson<SaveState>(PlayerPrefs.GetString("SavedGame"));
+        LoadLevel(savedGame.LevelIndex, wipeTransition, savedGame.SpawnPoint);
+    }
+
+    public void StartNewGame()
+    {
+        IsContinuedGame = false;
+        LoadLevelWipe(2);
     }
 
     public void LoadLevelWipe(int levelIndex)
@@ -59,17 +74,18 @@ public class LevelManager : MonoBehaviour
         while (!operation.isDone)
             yield return null;
 
-        if (transition == circleTransition)
+        foreach (GameObject point in GameObject.FindGameObjectsWithTag("SpawnPoint"))
         {
-            foreach (GameObject point in GameObject.FindGameObjectsWithTag("SpawnPoint"))
+            if (point.GetComponents<MonoBehaviour>().OfType<ISpawnPoint>().ToArray()?[0]?.SpawnPointIndex == locationIndex)
             {
-                if (point.GetComponents<MonoBehaviour>().OfType<ISpawnPoint>().ToArray()?[0]?.SpawnPointIndex == locationIndex)
+                GameObject.FindGameObjectWithTag("Player").transform.position = point.transform.position;
+                if (transition == circleTransition)
                 {
-                    GameObject.FindGameObjectWithTag("Player").transform.position = point.transform.position;
                     yield return null;
                     circleMask.anchoredPosition = Camera.main.WorldToScreenPoint(point.transform.position);
-                    break;
                 }
+
+                break;
             }
         }
 

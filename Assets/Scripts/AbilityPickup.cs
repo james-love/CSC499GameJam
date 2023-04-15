@@ -5,6 +5,6 @@ public class AbilityPickup : Interactable
     [SerializeField] private Ability ability;
     public override void Interact()
     {
-        PlayerState.Instance.AddAbility(ability);
+        Player.Instance.State.AddAbility(ability);
     }
 }

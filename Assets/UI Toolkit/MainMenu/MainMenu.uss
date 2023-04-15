@@ -18,10 +18,12 @@
 }
 
 .button {
-    font-size: 90px;
+    font-size: 70px;
     height: 100px;
     width: 415px;
     margin-bottom: 15px;
+    -unity-font: url('project://database/Assets/Fonts/PlayfairDisplay-Regular.ttf?fileID=12800000&guid=92e9fcdca2980134791a48ad37a14dde&type=3#PlayfairDisplay-Regular');
+    -unity-font-definition: url('project://database/Assets/Fonts/PlayfairDisplay-Regular%20SDF.asset?fileID=11400000&guid=e3f59ebb8aaaaf44dafdde0eab548890&type=2#PlayfairDisplay-Regular SDF');
 }
 
 .continue-container {
@@ -36,4 +38,26 @@
     position: absolute;
     right: -110px;
     background-image: url('project://database/Assets/UI%20Toolkit/UI%20Sprites/trash-can.png?fileID=21300000&guid=87d59d7da9af8d24998a5ff2c0be14b0&type=3#trash-can');
+}
+
+.modal {
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(91, 91, 91, 0.59);
+}
+
+.confirmation-container {
+    flex-direction: row;
+}
+
+.confirm-question {
+    font-size: 155px;
+    margin-bottom: 45px;
+    -unity-font: url('project://database/Assets/Fonts/PlayfairDisplay-Regular.ttf?fileID=12800000&guid=92e9fcdca2980134791a48ad37a14dde&type=3#PlayfairDisplay-Regular');
+    -unity-font-definition: url('project://database/Assets/Fonts/PlayfairDisplay-Regular%20SDF.asset?fileID=11400000&guid=e3f59ebb8aaaaf44dafdde0eab548890&type=2#PlayfairDisplay-Regular SDF');
 }

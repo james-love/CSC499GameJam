@@ -7,12 +7,12 @@ public class Lock : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (!PlayerState.Instance.State.Abilities.Contains(key))
-            InputManager.Instance.DisableAction("Interact");
+        if (!Player.Instance.State.Current.Abilities.Contains(key))
+            Player.Instance.Input.DisableAction("Interact");
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        InputManager.Instance.EnableAction("Interact");
+        Player.Instance.Input.EnableAction("Interact");
     }
 }

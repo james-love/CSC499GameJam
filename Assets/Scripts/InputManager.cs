@@ -3,7 +3,6 @@ using UnityEngine.InputSystem;
 
 public class InputManager : MonoBehaviour
 {
-    public static InputManager Instance { get; private set; }
     private PlayerInput inputs;
 
     public void Enable()
@@ -28,21 +27,11 @@ public class InputManager : MonoBehaviour
 
     private void Awake()
     {
-        if (Instance == null)
-        {
-            // TODO Remove this
-            inputs = GetComponent<PlayerInput>();
-            Enable();
-            DisableAction("Jump");
-            DisableAction("MeleeAttack");
-            DisableAction("RangeAttack");
-
-            Instance = this;
-            DontDestroyOnLoad(gameObject);
-        }
-        else
-        {
-            Destroy(gameObject);
-        }
+        // TODO Remove this
+        inputs = GetComponent<PlayerInput>();
+        Enable();
+        DisableAction("Jump");
+        DisableAction("MeleeAttack");
+        DisableAction("RangeAttack");
     }
 }
