@@ -50,7 +50,7 @@ public class PlayerMovement : MonoBehaviour
     public bool IsJumping { get; private set; }
     public bool IsRunning { get; private set; } = false;
 
-    public bool IsModifiedRunning => PlayerManager.Instance.AlwaysRun ? !IsRunning : IsRunning;
+    public bool IsModifiedRunning => PlayerState.Instance.AlwaysRun ? !IsRunning : IsRunning;
 
     private float BaseAcceleration => IsModifiedRunning ? runAccelAmount : walkAccelAmount;
     private float BaseDecceleration => IsModifiedRunning ? runDeccelAmount : walkDeccelAmount;

@@ -20,8 +20,6 @@ public class PlayerManager : MonoBehaviour
     private List<Image> healthImages = new();
     private Image healthContainer;
 
-    [HideInInspector] public bool AlwaysRun = false;
-
     [SerializeField] private UIDocument deathScreen;
 
     public int AdjustHealth(int adjustment)
@@ -32,12 +30,6 @@ public class PlayerManager : MonoBehaviour
             StartCoroutine(DeathAnimation());
 
         return currentHealth;
-    }
-
-    public void SetAlwaysRun(bool newValue)
-    {
-        AlwaysRun = newValue;
-        PlayerPrefs.SetInt("AlwaysRun", AlwaysRun ? 1 : 0);
     }
 
     private IEnumerator DeathAnimation()
@@ -72,8 +64,7 @@ public class PlayerManager : MonoBehaviour
             }
 
             ShowHUD = true; // TODO change back to false, enable somewhere else
-            if (PlayerPrefs.HasKey("AlwaysRun"))
-                AlwaysRun = PlayerPrefs.GetInt("AlwaysRun") == 1;
+
             //GameObject.FindGameObjectWithTag("Player").GetComponentInChildren<PlayerInput>().currentActionMap.Disable();
             Instance = this;
             DontDestroyOnLoad(gameObject);
