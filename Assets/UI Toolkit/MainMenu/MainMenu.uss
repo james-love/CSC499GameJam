@@ -1,0 +1,39 @@
+.container {
+    width: 100%;
+    height: 100%;
+}
+
+.title {
+    background-image: url('project://database/Assets/UI%20Toolkit/UI%20Sprites/the-title.png?fileID=21300000&guid=4a451d30c70e80e438d354ec79cb7fce&type=3#the-title');
+    width: 523px;
+    height: 323px;
+    margin-bottom: 15px;
+}
+
+.interactable-container {
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 75%;
+}
+
+.button {
+    font-size: 90px;
+    height: 100px;
+    width: 415px;
+    margin-bottom: 15px;
+}
+
+.continue-container {
+    flex-direction: row;
+    height: 100px;
+    margin-bottom: 15px;
+}
+
+.delete-button {
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    right: -110px;
+    background-image: url('project://database/Assets/UI%20Toolkit/UI%20Sprites/trash-can.png?fileID=21300000&guid=87d59d7da9af8d24998a5ff2c0be14b0&type=3#trash-can');
+}

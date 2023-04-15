@@ -4,11 +4,17 @@ public class PlayerState : MonoBehaviour
 {
     public static PlayerState Instance;
     [HideInInspector] public bool AlwaysRun = false;
+    private SaveState state;
 
     public void SetAlwaysRun(bool newValue)
     {
         AlwaysRun = newValue;
         PlayerPrefs.SetInt("AlwaysRun", AlwaysRun ? 1 : 0);
+    }
+
+    public void SetSaveState(SaveState state)
+    {
+        this.state = state;
     }
 
     private void Awake()
@@ -24,6 +30,18 @@ public class PlayerState : MonoBehaviour
         else
         {
             Destroy(gameObject);
+        }
+    }
+
+    private void Start()
+    {
+        foreach (GameObject point in GameObject.FindGameObjectsWithTag("SpawnPoint"))
+        {
+            if (point.GetComponent<SpawnPoint>().SpawnPointIndex == 1)
+            {
+                transform.position = point.transform.position;
+                break;
+            }
         }
     }
 }

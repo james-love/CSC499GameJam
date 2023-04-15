@@ -28,7 +28,7 @@ public class PauseMenu : MonoBehaviour
         muteSFX.RegisterCallback<ClickEvent>(_ => ToggleSFX());
 
         Slider volumeSlider = root.Q<Slider>("VolumeLevel");
-        volumeSlider.RegisterValueChangedCallback(_ => SoundManager.Instance.SetVolume(_.newValue));
+        volumeSlider.RegisterValueChangedCallback(e => SoundManager.Instance.SetVolume(e.newValue));
 
         Button mainMenu = root.Query<Button>("MainMenu");
         mainMenu.RegisterCallback<ClickEvent>(_ =>

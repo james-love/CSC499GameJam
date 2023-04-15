@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -18,15 +19,20 @@ public class LevelManager : MonoBehaviour
         LoadLevel(0, wipeTransition);
     }
 
-    public void LoadInterior()
+    public void LoadLevelWipe(int levelIndex)
     {
-        circleMask.anchoredPosition = Camera.main.WorldToScreenPoint(GameObject.FindGameObjectWithTag("Player").transform.position);
-        LoadLevel(1, circleTransition);
+        LoadLevel(levelIndex, wipeTransition);
     }
 
-    public void LoadLevel(int levelIndex, Animator transition)
+    public void LoadLevelCircle(int levelIndex, int locationIndex = 1)
     {
-        StartCoroutine(LoadAsync(levelIndex, transition));
+        circleMask.anchoredPosition = Camera.main.WorldToScreenPoint(GameObject.FindGameObjectWithTag("Player").transform.position);
+        LoadLevel(levelIndex, circleTransition, locationIndex);
+    }
+
+    private void LoadLevel(int levelIndex, Animator transition, int locationIndex = 1)
+    {
+        StartCoroutine(LoadAsync(levelIndex, transition, locationIndex));
     }
 
     private void Awake()
@@ -42,7 +48,7 @@ public class LevelManager : MonoBehaviour
         }
     }
 
-    private IEnumerator LoadAsync(int levelIndex, Animator transition)
+    private IEnumerator LoadAsync(int levelIndex, Animator transition, int locationIndex = 1)
     {
         Loading = true;
         Time.timeScale = 0;
@@ -53,9 +59,19 @@ public class LevelManager : MonoBehaviour
         while (!operation.isDone)
             yield return null;
 
-        // Bad code, but w/e
         if (transition == circleTransition)
-            circleMask.anchoredPosition = Camera.main.WorldToScreenPoint(GameObject.FindGameObjectWithTag("Player").transform.position);
+        {
+            foreach (GameObject point in GameObject.FindGameObjectsWithTag("SpawnPoint"))
+            {
+                if (point.GetComponents<MonoBehaviour>().OfType<ISpawnPoint>().ToArray()?[0]?.SpawnPointIndex == locationIndex)
+                {
+                    GameObject.FindGameObjectWithTag("Player").transform.position = point.transform.position;
+                    yield return null;
+                    circleMask.anchoredPosition = Camera.main.WorldToScreenPoint(point.transform.position);
+                    break;
+                }
+            }
+        }
 
         transition.SetTrigger("Loaded");
         Loading = false;
