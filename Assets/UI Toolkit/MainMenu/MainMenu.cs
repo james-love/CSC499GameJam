@@ -40,8 +40,11 @@ public class MainMenu : MonoBehaviour
         Button quit = root.Q<Button>("QuitGame");
         quit.RegisterCallback<ClickEvent>(_ =>
         {
-            Application.Quit();
+#if UNITY_EDITOR
             EditorApplication.isPlaying = false;
+#else
+            Application.Quit();
+#endif
         });
     }
 }
