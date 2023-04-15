@@ -23,4 +23,5 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Box/Level 1-2.unity
     guid: 9cdac0c18ccc5414096c607753394522
-  m_configObjects: {}
+  m_configObjects:
+    com.unity.addressableassets: {fileID: 11400000, guid: 28a07c1579df8e3408013d96aac4f69d, type: 2}

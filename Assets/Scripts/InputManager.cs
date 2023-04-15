@@ -25,6 +25,16 @@ public class InputManager : MonoBehaviour
         inputs.currentActionMap.FindAction(action).Disable();
     }
 
+    public bool IsEnabled()
+    {
+        return inputs.currentActionMap.enabled;
+    }
+
+    public bool IsEnabled(string action)
+    {
+        return inputs.currentActionMap.FindAction(action).enabled;
+    }
+
     private void Awake()
     {
         // TODO Remove this
