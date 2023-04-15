@@ -40,8 +40,11 @@ public class PauseMenu : MonoBehaviour
         Button quit = root.Query<Button>("Quit");
         quit.RegisterCallback<ClickEvent>(_ =>
         {
-            Application.Quit();
+#if UNITY_EDITOR
             EditorApplication.isPlaying = false;
+#else
+            Application.Quit();
+#endif
         });
     }
 
