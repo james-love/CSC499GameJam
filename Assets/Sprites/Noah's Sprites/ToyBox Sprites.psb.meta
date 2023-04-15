@@ -1,0 +1,493 @@
+fileFormatVersion: 2
+guid: b0200517b69fe8d408e4a51cff9e8a31
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: b2a9591990af98743ba3ff7cf1000886, type: 3}
+  textureImporterSettings:
+    alphaSource: 1
+    mipMapMode: 0
+    enableMipMap: 1
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+    convertToNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    isReadable: 0
+    streamingMipmaps: 1
+    streamingMipmapsPriority: 0
+    vTOnly: 0
+    ignoreMasterTextureLimit: 0
+    nPOTScale: 1
+    sRGBTexture: 1
+    spriteMode: 2
+    spriteExtrude: 1
+    spriteMeshType: 1
+    alignment: 0
+    spritePivot: {x: 0.5, y: 0.5}
+    spritePixelsToUnits: 100
+    spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+    spriteGenerateFallbackPhysicsShape: 0
+    generateCubemap: 6
+    cubemapConvolution: 0
+    seamlessCubemap: 0
+    alphaIsTransparency: 1
+    spriteTessellationDetail: -1
+    textureType: 8
+    textureShape: 1
+    singleChannelComponent: 0
+    flipbookRows: 0
+    flipbookColumns: 0
+    ignorePngGamma: 0
+    cookieMode: 0
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 0
+    wrapV: 0
+    wrapW: 0
+    normalMap: 0
+    textureFormat: 0
+    maxTextureSize: 0
+    lightmap: 0
+    compressionQuality: 0
+    linearTexture: 0
+    grayScaleToAlpha: 0
+    rGBM: 0
+    cubemapConvolutionSteps: 0
+    cubemapConvolutionExponent: 0
+    maxTextureSizeSet: 0
+    compressionQualitySet: 0
+    textureFormatSet: 0
+    applyGammaDecoding: 0
+  spriteImportData:
+  - name: 
+    originalName: 
+    pivot: {x: 0, y: 0}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    spriteID: 
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 0, y: 0}
+    spritePosition: {x: 0, y: 0}
+  mosaicSpriteImportData: []
+  rigSpriteImportData:
+  - name: Hat
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 220
+      y: 397
+      width: 214
+      height: 104
+    spriteID: ac8ce6f53e6ed8148a67a5348e036b82
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 220, y: 397}
+    spritePosition: {x: 365, y: 569}
+  - name: Clothes
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 270
+      width: 364
+      height: 119
+    spriteID: f8d396454070f5b4d86464924620a2fd
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 4, y: 270}
+    spritePosition: {x: 679, y: 847}
+  - name: Falling Guy 1
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 376
+      y: 270
+      width: 130
+      height: 98
+    spriteID: 745fbc41bbe4d2a4c849c027e7423cce
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 376, y: 270}
+    spritePosition: {x: 920, y: 1037}
+  - name: Falling Guy 2
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 518
+      width: 144
+      height: 82
+    spriteID: da96854d6dab7cb4cac5819c0a80be5c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 0, y: 518}
+    spritePosition: {x: 535, y: 1037}
+  - name: Boot
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 397
+      width: 208
+      height: 113
+    spriteID: 5a4c89d3fe85b5d43b38666d87f1839d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 4, y: 397}
+    spritePosition: {x: 36, y: 559}
+  - name: Red Tube
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 220
+      y: 619
+      width: 216
+      height: 42
+    spriteID: fe0e3a8512ef9594c9505104b489bfe9
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 220, y: 618}
+    spritePosition: {x: 298, y: 751}
+  - name: Blue Tube
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 220
+      y: 567
+      width: 216
+      height: 44
+    spriteID: 6d09ffd400aa0ef4d893b9f099258b48
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 220, y: 567}
+    spritePosition: {x: 298, y: 853}
+  - name: Green Tube
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 220
+      y: 509
+      width: 215
+      height: 50
+    spriteID: c4a031f6fd3cf4548968eeafd2cee9f1
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 220, y: 509}
+    spritePosition: {x: 21, y: 847}
+  - name: Purple Tube
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 220
+      y: 669
+      width: 219
+      height: 33
+    spriteID: d3aa64c1191518b42a28a1005bb275b8
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 220, y: 668}
+    spritePosition: {x: 25, y: 742}
+  - name: Background
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 407
+      height: 258
+    spriteID: 4faca04bae341f74d9109a8a8f76c459
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -12, y: 4}
+    spritePosition: {x: 16, y: 927}
+  characterData:
+    bones: []
+    parts: []
+    dimension: {x: 0, y: 0}
+    characterGroups: []
+    boneReadOnly: 0
+  sharedRigSpriteImportData: []
+  sharedRigCharacterData:
+    bones: []
+    parts: []
+    dimension: {x: 0, y: 0}
+    characterGroups: []
+    boneReadOnly: 0
+  platformSettings: []
+  mosaicLayers: 1
+  characterMode: 1
+  documentPivot: {x: 0, y: 0}
+  documentAlignment: 7
+  importHiddenLayers: 0
+  layerMappingOption: 2
+  generatePhysicsShape: 0
+  paperDollMode: 0
+  keepDupilcateSpriteName: 1
+  skeletonAssetReferenceID: 
+  spriteCategoryList:
+    categories: []
+  spritePackingTag: 
+  resliceFromLayer: 0
+  mosaicPSDLayers: []
+  rigPSDLayers:
+  - name: Hat
+    spriteName: Hat
+    isGroup: 0
+    parentIndex: -1
+    spriteID: ac8ce6f53e6ed8148a67a5348e036b82
+    layerID: 100
+    mosaicPosition: {x: 220, y: 397}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Clothes
+    spriteName: Clothes
+    isGroup: 0
+    parentIndex: -1
+    spriteID: f8d396454070f5b4d86464924620a2fd
+    layerID: 88
+    mosaicPosition: {x: 4, y: 270}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Falling Guy 1
+    spriteName: Falling Guy 1
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 745fbc41bbe4d2a4c849c027e7423cce
+    layerID: 92
+    mosaicPosition: {x: 376, y: 270}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Falling Guy 2
+    spriteName: Falling Guy 2
+    isGroup: 0
+    parentIndex: -1
+    spriteID: da96854d6dab7cb4cac5819c0a80be5c
+    layerID: 93
+    mosaicPosition: {x: 4, y: 518}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Boot
+    spriteName: Boot
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 5a4c89d3fe85b5d43b38666d87f1839d
+    layerID: 85
+    mosaicPosition: {x: 4, y: 397}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Red Tube
+    spriteName: Red Tube
+    isGroup: 0
+    parentIndex: -1
+    spriteID: fe0e3a8512ef9594c9505104b489bfe9
+    layerID: 95
+    mosaicPosition: {x: 220, y: 619}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Blue Tube
+    spriteName: Blue Tube
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 6d09ffd400aa0ef4d893b9f099258b48
+    layerID: 96
+    mosaicPosition: {x: 220, y: 567}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Green Tube
+    spriteName: Green Tube
+    isGroup: 0
+    parentIndex: -1
+    spriteID: c4a031f6fd3cf4548968eeafd2cee9f1
+    layerID: 97
+    mosaicPosition: {x: 220, y: 509}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Purple Tube
+    spriteName: Purple Tube
+    isGroup: 0
+    parentIndex: -1
+    spriteID: d3aa64c1191518b42a28a1005bb275b8
+    layerID: 98
+    mosaicPosition: {x: 220, y: 669}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Group 1
+    spriteName: 
+    isGroup: 1
+    parentIndex: -1
+    spriteID: fa49877989a169d4593934d8b70b981a
+    layerID: 81
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 0
+  - name: Layer 1 copy 2
+    spriteName: 
+    isGroup: 0
+    parentIndex: 9
+    spriteID: 90fdf93b4c3e42a4ba33a14b140c4066
+    layerID: 74
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: Layer 1 copy
+    spriteName: 
+    isGroup: 0
+    parentIndex: 9
+    spriteID: 9b8dff3b1ce5a944989f98d3ccf2e54e
+    layerID: 73
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: Layer 1
+    spriteName: 
+    isGroup: 0
+    parentIndex: 9
+    spriteID: 549e9aff314ba6849a2e948ce3d23c9e
+    layerID: 72
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: Background
+    spriteName: Background
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 4faca04bae341f74d9109a8a8f76c459
+    layerID: 54
+    mosaicPosition: {x: 4, y: 4}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  sharedRigPSDLayers: []
+  pSDLayerImportSetting: []
+  generateGOHierarchy: 0
+  textureAssetName: 
+  prefabAssetName: 
+  spriteLibAssetName: 
+  skeletonAssetName: 
+  secondarySpriteTextures: []
