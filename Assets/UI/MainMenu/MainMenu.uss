@@ -4,7 +4,7 @@
 }
 
 .title {
-    background-image: url('project://database/Assets/UI%20Toolkit/UI%20Sprites/the-title.png?fileID=21300000&guid=4a451d30c70e80e438d354ec79cb7fce&type=3#the-title');
+    background-image: url('project://database/Assets/UI/Sprites/the-title.png?fileID=21300000&guid=4a451d30c70e80e438d354ec79cb7fce&type=3#the-title');
     width: 523px;
     height: 323px;
     margin-bottom: 15px;
@@ -37,7 +37,7 @@
     width: 100px;
     position: absolute;
     right: -110px;
-    background-image: url('project://database/Assets/UI%20Toolkit/UI%20Sprites/trash-can.png?fileID=21300000&guid=87d59d7da9af8d24998a5ff2c0be14b0&type=3#trash-can');
+    background-image: url('project://database/Assets/UI/Sprites/trash-can.png?fileID=21300000&guid=87d59d7da9af8d24998a5ff2c0be14b0&type=3#trash-can');
 }
 
 .modal {
