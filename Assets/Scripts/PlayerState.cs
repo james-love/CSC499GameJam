@@ -1,10 +1,11 @@
+using System.Linq;
 using UnityEngine;
 
 public class PlayerState : MonoBehaviour
 {
-    public static PlayerState Instance;
-    [HideInInspector] public bool AlwaysRun = false;
-    private SaveState state;
+    public static PlayerState Instance { get; private set; }
+    public SaveState State { get; private set; }
+    [HideInInspector] public bool AlwaysRun { get; private set; } = false;
 
     public void SetAlwaysRun(bool newValue)
     {
@@ -12,9 +13,34 @@ public class PlayerState : MonoBehaviour
         PlayerPrefs.SetInt("AlwaysRun", AlwaysRun ? 1 : 0);
     }
 
-    public void SetSaveState(SaveState state)
+    public void AddAbility(Ability ability)
     {
-        this.state = state;
+        if (!State.Abilities.Contains(ability))
+        {
+            State.Abilities.Add(ability);
+
+            // TODO Logic to enable/disable sprites for animation
+            switch (ability)
+            {
+                case Ability.MeleeAttack:
+                    InputManager.Instance.EnableAction("MeleeAttack");
+                    break;
+                case Ability.RangeAttack:
+                    InputManager.Instance.EnableAction("RangeAttack");
+                    break;
+                case Ability.Jump:
+                    InputManager.Instance.EnableAction("Jump");
+                    break;
+                default:
+                    break;
+            }
+        }
+    }
+
+    public void AddFlag(Flag flag)
+    {
+        if (!State.Flags.Contains(flag))
+            State.Flags.Add(flag);
     }
 
     private void Awake()
@@ -23,6 +49,8 @@ public class PlayerState : MonoBehaviour
         {
             if (PlayerPrefs.HasKey("AlwaysRun"))
                 AlwaysRun = PlayerPrefs.GetInt("AlwaysRun") == 1;
+
+            State = new() { LevelIndex = 2, SpawnPoint = 1, Abilities = new(), Flags = new() };
 
             Instance = this;
             DontDestroyOnLoad(gameObject);

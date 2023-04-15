@@ -2,9 +2,9 @@ using UnityEngine;
 
 public class SoundManager : MonoBehaviour
 {
-    public static SoundManager Instance;
     [SerializeField] private AudioSource musicSource;
     [SerializeField] private AudioSource effectsSource;
+    public static SoundManager Instance { get; private set; }
 
     public bool MusicMuted => musicSource.mute;
     public bool SFXMuted => effectsSource.mute;

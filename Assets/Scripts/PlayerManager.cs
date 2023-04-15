@@ -8,11 +8,8 @@ using Image = UnityEngine.UI.Image;
 // TODO: Split into a player manager and a HUD manager
 public class PlayerManager : MonoBehaviour
 {
-    public static PlayerManager Instance;
-
     [SerializeField] private int maxHealth;
     [SerializeField] private int currentHealth;
-    [HideInInspector] public bool ShowHUD;
 
     [SerializeField] private Sprite healthSprite;
     [SerializeField] private Sprite damagedSprite;
@@ -21,6 +18,9 @@ public class PlayerManager : MonoBehaviour
     private Image healthContainer;
 
     [SerializeField] private UIDocument deathScreen;
+
+    public static PlayerManager Instance { get; private set; }
+    [HideInInspector] public bool ShowHUD { get; set; }
 
     public int AdjustHealth(int adjustment)
     {

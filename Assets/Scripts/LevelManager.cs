@@ -5,10 +5,10 @@ using UnityEngine.SceneManagement;
 
 public class LevelManager : MonoBehaviour
 {
-    public static LevelManager Instance;
     [SerializeField] private Animator wipeTransition;
     [SerializeField] private Animator circleTransition;
     [SerializeField] private RectTransform circleMask;
+    public static LevelManager Instance { get; private set; }
     public bool Loading { get; private set; }
 
     public void ReloadMainMenu()

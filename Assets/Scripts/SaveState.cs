@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 
 public enum Ability
 {
@@ -7,7 +8,7 @@ public enum Ability
     Jump,
 }
 
-public enum Flags
+public enum Flag
 {
     RockBroken,
 }
@@ -17,6 +18,6 @@ public class SaveState
 {
     public int LevelIndex;
     public int SpawnPoint;
-    public Ability[] Abilities;
-    public Flags[] Flags;
+    public List<Ability> Abilities;
+    public List<Flag> Flags;
 }
