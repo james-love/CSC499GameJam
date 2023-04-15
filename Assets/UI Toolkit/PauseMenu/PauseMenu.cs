@@ -1,5 +1,6 @@
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UIElements;
 using static UnityEngine.InputSystem.InputAction;
 
@@ -37,6 +38,13 @@ public class PauseMenu : MonoBehaviour
             LevelManager.Instance.ReloadMainMenu();
         });
 
+        Button reloadSave = root.Query<Button>("ReloadSave");
+        reloadSave.RegisterCallback<ClickEvent>(_ =>
+        {
+            SceneManager.MoveGameObjectToScene(Player.Instance.gameObject, SceneManager.GetActiveScene());
+            LevelManager.Instance.ContinueGame();
+        });
+
         Button quit = root.Query<Button>("Quit");
         quit.RegisterCallback<ClickEvent>(_ =>
         {
@@ -46,6 +54,13 @@ public class PauseMenu : MonoBehaviour
             Application.Quit();
 #endif
         });
+    }
+
+    private void Start()
+    {
+        Toggle alwaysRun = root.Q<Toggle>("AlwaysRun");
+        alwaysRun.RegisterValueChangedCallback(e => Player.Instance.State.SetAlwaysRun(e.newValue));
+        alwaysRun.value = Player.Instance.State.AlwaysRun;
     }
 
     private void ToggleMusic()

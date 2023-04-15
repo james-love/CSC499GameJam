@@ -63,3 +63,19 @@
     -unity-font: url('project://database/Assets/Fonts/PlayfairDisplay-Regular.ttf?fileID=12800000&guid=92e9fcdca2980134791a48ad37a14dde&type=3#PlayfairDisplay-Regular');
     -unity-font-definition: url('project://database/Assets/Fonts/PlayfairDisplay-Regular%20SDF.asset?fileID=11400000&guid=e3f59ebb8aaaaf44dafdde0eab548890&type=2#PlayfairDisplay-Regular SDF');
 }
+
+.always-run-label {
+    font-size: 80px;
+}
+
+.always-run-container {
+    flex-direction: row;
+    position: absolute;
+    bottom: 65px;
+    right: 65px;
+}
+
+.toggle #unity-checkmark {
+    width: 100px;
+    height: 100px;
+}
