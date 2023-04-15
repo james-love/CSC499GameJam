@@ -98,5 +98,11 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Platform/Level 3-5.unity
     guid: f4c88f89db1de4f4a93c4270f2c73c64
+  - enabled: 1
+    path: Assets/Scenes/BoxToOther.unity
+    guid: abc59f3bd8a0ace409043e660f0d5f8f
+  - enabled: 1
+    path: Assets/Scenes/OtherToTrain.unity
+    guid: 635b408436ce6a342992601cb7737979
   m_configObjects:
     com.unity.addressableassets: {fileID: 11400000, guid: 28a07c1579df8e3408013d96aac4f69d, type: 2}
