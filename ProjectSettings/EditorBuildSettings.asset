@@ -29,5 +29,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/OtherToTrain.unity
     guid: 635b408436ce6a342992601cb7737979
+  - enabled: 1
+    path: Assets/Scenes/EndScene.unity
+    guid: 412152e92eba66c42b0d22e19df0456b
   m_configObjects:
     com.unity.addressableassets: {fileID: 11400000, guid: 28a07c1579df8e3408013d96aac4f69d, type: 2}
