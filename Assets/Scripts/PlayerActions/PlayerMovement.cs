@@ -65,7 +65,7 @@ public class PlayerMovement : MonoBehaviour
         {
             inputDirection = context.ReadValue<float>();
             if (Time.timeScale != 0)
-                playerSprite.flipX = inputDirection < 0;
+                playerSprite.transform.localScale = new Vector3(inputDirection < 0 ? -1.3f : 1.3f, playerSprite.transform.localScale.y, playerSprite.transform.localScale.z);
         }
         else if (context.canceled)
         {

@@ -103,6 +103,7 @@ public class Bird : Enemy
         alerted = true;
         anim.SetTrigger("Alerted");
         yield return new WaitUntil(() => Utility.AnimationFinished(anim, "BirdAlerted"));
+        graphics.flipX = end.x < transform.position.x;
         anim.SetTrigger("Fly");
         isFlying = true;
         alerted = false;
