@@ -40,6 +40,7 @@ public class PlayerManager : MonoBehaviour
         playerAnim.SetTrigger("Death");
         yield return new WaitUntil(() => Utility.AnimationFinished(playerAnim, "PlayerDeath"));
         Time.timeScale = 0;
+        deathScreen.rootVisualElement.Q<Button>("ReloadSave").style.display = PlayerPrefs.HasKey("SavedGame") ? DisplayStyle.Flex : DisplayStyle.None;
         deathScreen.rootVisualElement.style.display = DisplayStyle.Flex;
     }
 

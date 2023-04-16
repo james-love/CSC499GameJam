@@ -87,6 +87,7 @@ public class PauseMenu : MonoBehaviour
         if (context.started)
         {
             Time.timeScale = 0;
+            root.Q<Button>("ReloadSave").style.display = PlayerPrefs.HasKey("SavedGame") ? DisplayStyle.Flex : DisplayStyle.None;
             UpdateVolumeDisplay();
             root.style.display = DisplayStyle.Flex;
         }

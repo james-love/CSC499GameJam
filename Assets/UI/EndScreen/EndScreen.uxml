@@ -1,0 +1,9 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI/EndScreen/EndScreen.uss?fileID=7433441132597879392&amp;guid=67822bdd27234c943b2f2d5dcf9768b9&amp;type=3#EndScreen" />
+    <ui:VisualElement name="Container" class="container">
+        <ui:Label text="Game Over" display-tooltip-when-elided="true" class="text victory-text" style="font-size: 140px;" />
+        <ui:Button text="Main Menu" display-tooltip-when-elided="true" name="MainMenu" class="text button" />
+        <ui:Button text="Reload Save" display-tooltip-when-elided="true" name="ReloadSave" class="text button" />
+        <ui:Button text="Quit" display-tooltip-when-elided="true" name="Quit" class="text button" />
+    </ui:VisualElement>
+</ui:UXML>
