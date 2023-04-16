@@ -9,6 +9,7 @@ public class LevelManager : MonoBehaviour
     [SerializeField] private Animator circleTransition;
     [SerializeField] private RectTransform circleMask;
     [SerializeField] private GameObject player;
+    [SerializeField] private AudioClip music;
     public static LevelManager Instance { get; private set; }
     public bool Loading { get; private set; }
     public bool IsContinuedGame { get; private set; } = false;
@@ -16,7 +17,7 @@ public class LevelManager : MonoBehaviour
     public void ReloadMainMenu()
     {
         Destroy(Player.Instance.gameObject);
-        // TODO Set menu music here?
+        SoundManager.Instance.PlayMusic(music);
 
         LoadLevel(0, wipeTransition);
     }

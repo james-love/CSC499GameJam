@@ -13,6 +13,8 @@ public class Zombie : Enemy
     [SerializeField] private float speed;
     [SerializeField] private LayerMask playerLayer;
     [SerializeField] private LayerMask groundLayer;
+    [SerializeField] private AudioClip hit;
+    [SerializeField] private AudioClip kill;
     private Transform target;
     private Rigidbody2D rb;
     private Animator anim;
@@ -33,6 +35,7 @@ public class Zombie : Enemy
     private IEnumerator PlayDeath()
     {
         anim.SetTrigger("Death");
+        SoundManager.Instance.PlaySound(kill);
         yield return new WaitUntil(() => Utility.AnimationFinished(anim, "ZombieDeath"));
         Destroy(gameObject);
     }
@@ -125,7 +128,7 @@ public class Zombie : Enemy
     {
         if (currentHealth != 0 && collision.gameObject.CompareTag("Player") && timeSinceLastHit == attackCooldown)
         {
-            // TODO Player hurt sound and animation
+            SoundManager.Instance.PlaySound(hit);
             timeSinceLastHit = 0f;
             Player.Instance.Manager.AdjustHealth(-1);
         }

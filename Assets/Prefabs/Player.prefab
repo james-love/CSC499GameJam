@@ -792,6 +792,7 @@ MonoBehaviour:
   attackRange: 1.75
   attackCooldown: 1.5
   attackValue: 1
+  attack: {fileID: 8300000, guid: b7be3029b4c7139448373d4b3e5288f0, type: 3}
 --- !u!114 &6664894199543153081
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -805,6 +806,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackCooldown: 1.5
+  shoot: {fileID: 8300000, guid: e5885f27fd136ba489c5f02edc9e475f, type: 3}
 --- !u!114 &6664894199543153074
 MonoBehaviour:
   m_ObjectHideFlags: 0

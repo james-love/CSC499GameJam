@@ -12,6 +12,7 @@ public class Bird : Enemy
     [SerializeField] private float duration = 10f;
     [SerializeField] private float visionRange = 5;
     [SerializeField] private LayerMask playerLayer;
+    [SerializeField] private AudioClip caw;
     private int currentHealth;
     private float animTime;
     private Vector3 start;
@@ -102,6 +103,7 @@ public class Bird : Enemy
     {
         alerted = true;
         anim.SetTrigger("Alerted");
+        SoundManager.Instance.PlaySound(caw);
         yield return new WaitUntil(() => Utility.AnimationFinished(anim, "BirdAlerted"));
         graphics.flipX = end.x < transform.position.x;
         anim.SetTrigger("Fly");

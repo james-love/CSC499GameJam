@@ -206,6 +206,7 @@ MonoBehaviour:
   playerLayer:
     serializedVersion: 2
     m_Bits: 512
+  caw: {fileID: 8300000, guid: f15e18949c2362b4288dff9880390dc8, type: 3}
 --- !u!95 &7543977785199085956
 Animator:
   serializedVersion: 5

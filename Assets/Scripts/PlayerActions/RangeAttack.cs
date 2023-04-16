@@ -7,6 +7,7 @@ using static UnityEngine.InputSystem.InputAction;
 public class RangeAttack : MonoBehaviour
 {
     [SerializeField] private float attackCooldown = 1.5f;
+    [SerializeField] private AudioClip shoot;
     private PlayerMovement playerMovement;
     private float timeSinceLastAttack;
     private Animator playerAnim;
@@ -26,7 +27,8 @@ public class RangeAttack : MonoBehaviour
     {
         if (context.started && timeSinceLastAttack == attackCooldown)
         {
-            // TODO Play Sound here
+            
+            SoundManager.Instance.PlaySound(shoot);
             timeSinceLastAttack = 0f;
             playerAnim.SetTrigger("RangeAttack");
             // TODO Generate projectile using playerMovement.IsFacingRight

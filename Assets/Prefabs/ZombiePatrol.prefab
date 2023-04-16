@@ -132,6 +132,8 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 64
+  hit: {fileID: 8300000, guid: d03895bde452f024e995a7ff08488ee1, type: 3}
+  kill: {fileID: 8300000, guid: 049415c90112d7d4d9e5e99b28f3715a, type: 3}
 --- !u!95 &3039668582597374668
 Animator:
   serializedVersion: 5
