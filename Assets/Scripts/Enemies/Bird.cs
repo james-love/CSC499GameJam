@@ -1,18 +1,22 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class Bird : MonoBehaviour
+public class Bird : Enemy
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] private int maxHealth = 1;
+    private int currentHealth;
+
+    public override void EnemyHit(float damageValue)
     {
-        
+        currentHealth--;
+        if (currentHealth <= 0)
+        {
+            // TODO Sound and animation
+            Destroy(gameObject);
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Awake()
     {
-        
+        currentHealth = maxHealth;
     }
 }

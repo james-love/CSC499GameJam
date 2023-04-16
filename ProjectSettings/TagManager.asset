@@ -16,8 +16,8 @@ TagManager:
   - Ground
   - Enemy
   - Interact
-  - 
-  - 
+  - Player
+  - EnemyCollider
   - 
   - 
   - 

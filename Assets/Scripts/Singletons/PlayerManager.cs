@@ -38,15 +38,9 @@ public class PlayerManager : MonoBehaviour
         Animator playerAnim = player.GetComponentInChildren<Animator>();
         player.GetComponentInChildren<PlayerInput>().currentActionMap.Disable();
         playerAnim.SetTrigger("Death");
-        yield return new WaitUntil(() => AnimationFinished(playerAnim, "jimmy_dies"));
+        yield return new WaitUntil(() => Utility.AnimationFinished(playerAnim, "PlayerDeath"));
         Time.timeScale = 0;
         deathScreen.rootVisualElement.style.display = DisplayStyle.Flex;
-    }
-
-    private bool AnimationFinished(Animator animator, string animation)
-    {
-        return animator.GetCurrentAnimatorStateInfo(0).IsName(animation) &&
-            animator.GetCurrentAnimatorStateInfo(0).normalizedTime >= 1;
     }
 
     private void Awake()

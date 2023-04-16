@@ -68,7 +68,7 @@ public class LevelManager : MonoBehaviour
         Loading = true;
         Time.timeScale = 0;
         transition.SetTrigger("Start");
-        yield return new WaitUntil(() => AnimationFinished(transition, "TransitionStart"));
+        yield return new WaitUntil(() => Utility.AnimationFinished(transition, "TransitionStart"));
 
         AsyncOperation operation = SceneManager.LoadSceneAsync(levelIndex);
         while (!operation.isDone)
@@ -92,11 +92,5 @@ public class LevelManager : MonoBehaviour
         transition.SetTrigger("Loaded");
         Loading = false;
         Time.timeScale = 1;
-    }
-
-    private bool AnimationFinished(Animator animator, string animation)
-    {
-        return animator.GetCurrentAnimatorStateInfo(0).IsName(animation) &&
-            animator.GetCurrentAnimatorStateInfo(0).normalizedTime >= 1;
     }
 }
