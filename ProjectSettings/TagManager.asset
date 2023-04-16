@@ -6,6 +6,7 @@ TagManager:
   tags:
   - OneWay
   - SpawnPoint
+  - Enemy
   layers:
   - Default
   - TransparentFX

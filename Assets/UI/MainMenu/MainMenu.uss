@@ -4,10 +4,10 @@
 }
 
 .title {
-    background-image: url('project://database/Assets/UI/Sprites/the-title.png?fileID=21300000&guid=4a451d30c70e80e438d354ec79cb7fce&type=3#the-title');
-    width: 523px;
-    height: 323px;
+    background-image: url('project://database/Assets/Sprites/Title.png?fileID=-1486653007&guid=6f4b277cf5c58da4d83edc432000cf4a&type=3#Title_0');
     margin-bottom: 15px;
+    height: 269px;
+    width: 641px;
 }
 
 .interactable-container {

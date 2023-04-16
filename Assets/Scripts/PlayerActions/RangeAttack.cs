@@ -40,6 +40,6 @@ public class RangeAttack : MonoBehaviour
         yield return opHandle;
 
         if (opHandle.Status == AsyncOperationStatus.Succeeded)
-            Instantiate(opHandle.Result, transform.position, Quaternion.identity).GetComponent<Bullet>().Direction = direction;
+            Instantiate(opHandle.Result, transform.position, Quaternion.identity).GetComponent<Bullet>().SetDirection(direction);
     }
 }

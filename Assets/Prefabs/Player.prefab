@@ -433,8 +433,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 3
   currentHealth: 3
-  healthSprite: {fileID: 21300000, guid: 5c91e00ca2ca2be4e8323ef00d20c9c4, type: 3}
-  damagedSprite: {fileID: 21300000, guid: 2afab99c8112b4043a78520dcf66f30b, type: 3}
+  healthSprite: {fileID: -1857837730, guid: 8693d7ec36558214fad9c9e6b6d3d3fe, type: 3}
+  damagedSprite: {fileID: -577089293, guid: 8693d7ec36558214fad9c9e6b6d3d3fe, type: 3}
   deathScreen: {fileID: 0}
 --- !u!223 &6664894199260416116
 Canvas:
