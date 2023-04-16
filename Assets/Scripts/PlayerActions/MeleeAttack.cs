@@ -7,6 +7,7 @@ public class MeleeAttack : MonoBehaviour
     [SerializeField] private float attackRange = 1.25f;
     [SerializeField] private float attackCooldown = 1.5f;
     [SerializeField] private int attackValue = 1;
+    [SerializeField] private AudioClip attack;
     private PlayerMovement playerMovement;
     private float timeSinceLastAttack;
     private Animator playerAnim;
@@ -26,7 +27,8 @@ public class MeleeAttack : MonoBehaviour
     {
         if (context.started && timeSinceLastAttack == attackCooldown)
         {
-            // TODO Play Sound here
+            
+            SoundManager.Instance.PlaySound(attack);
             timeSinceLastAttack = 0f;
             playerAnim.SetTrigger("MeleeAttack");
             Collider2D hit = Physics2D.OverlapBox(new Vector2(transform.position.x + ((attackRange / 2f) * (playerMovement.IsFacingRight ? 1f : -1f)), transform.position.y), new Vector2(attackRange, 2f), 0, enemyMask);

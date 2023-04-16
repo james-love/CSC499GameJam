@@ -605,6 +605,7 @@ MonoBehaviour:
   currentHealth: 3
   healthSprite: {fileID: -1857837730, guid: 8693d7ec36558214fad9c9e6b6d3d3fe, type: 3}
   damagedSprite: {fileID: -577089293, guid: 8693d7ec36558214fad9c9e6b6d3d3fe, type: 3}
+  hurt: {fileID: 8300000, guid: 60891e91e355f2c48a30919d6ce8e580, type: 3}
   deathScreen: {fileID: 0}
 --- !u!223 &6664894199260416116
 Canvas:
@@ -791,6 +792,7 @@ MonoBehaviour:
   attackRange: 1.75
   attackCooldown: 1.5
   attackValue: 1
+  attack: {fileID: 8300000, guid: b7be3029b4c7139448373d4b3e5288f0, type: 3}
 --- !u!114 &6664894199543153081
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -804,6 +806,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackCooldown: 1.5
+  shoot: {fileID: 8300000, guid: e5885f27fd136ba489c5f02edc9e475f, type: 3}
 --- !u!114 &6664894199543153074
 MonoBehaviour:
   m_ObjectHideFlags: 0

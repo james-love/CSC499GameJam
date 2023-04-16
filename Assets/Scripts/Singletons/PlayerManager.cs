@@ -14,6 +14,8 @@ public class PlayerManager : MonoBehaviour
     [SerializeField] private Sprite healthSprite;
     [SerializeField] private Sprite damagedSprite;
 
+    [SerializeField] private AudioClip hurt;
+
     private List<Image> healthImages = new();
     private Image healthContainer;
 
@@ -33,7 +35,7 @@ public class PlayerManager : MonoBehaviour
 
     private IEnumerator DeathAnimation()
     {
-        // TODO: Play Death Sound
+        SoundManager.Instance.PlaySound(hurt);
         GameObject player = GameObject.FindGameObjectWithTag("Player");
         Animator playerAnim = player.GetComponentInChildren<Animator>();
         player.GetComponentInChildren<PlayerInput>().currentActionMap.Disable();

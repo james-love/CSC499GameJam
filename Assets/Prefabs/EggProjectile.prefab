@@ -91,6 +91,7 @@ MonoBehaviour:
   player:
     serializedVersion: 2
     m_Bits: 512
+  sound: {fileID: 8300000, guid: d51248eac396ca243b8f9f439263ce42, type: 3}
 --- !u!1 &1697563929806190662
 GameObject:
   m_ObjectHideFlags: 0
