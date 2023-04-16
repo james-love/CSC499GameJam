@@ -21,6 +21,14 @@ MonoBehaviour:
     m_Address: InteractPopup
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: b1aaad75d241cf747ba79c65a8cb2460
+    m_Address: EggProjectile
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 2b2b0e0651f4b0449a62e4c1b72de189
+    m_Address: Bullet
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 244ee14cc7128a6449d88d149ded958e, type: 2}
   m_SchemaSet:

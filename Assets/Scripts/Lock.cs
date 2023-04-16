@@ -1,6 +1,5 @@
 using UnityEngine;
 
-// TODO Temp class for confirming ability state saving
 public class Lock : MonoBehaviour
 {
     [SerializeField] private Ability key;

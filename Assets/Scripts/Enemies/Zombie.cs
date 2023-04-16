@@ -37,12 +37,6 @@ public class Zombie : Enemy
         Destroy(gameObject);
     }
 
-    public bool AnimationFinished(Animator animator, string animation)
-    {
-        return animator.GetCurrentAnimatorStateInfo(0).IsName(animation) &&
-            animator.GetCurrentAnimatorStateInfo(0).normalizedTime >= 1;
-    }
-
     private void Awake()
     {
         currentHealth = maxHealth;

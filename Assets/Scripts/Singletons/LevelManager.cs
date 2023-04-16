@@ -31,7 +31,7 @@ public class LevelManager : MonoBehaviour
     public void StartNewGame()
     {
         IsContinuedGame = false;
-        LoadLevelWipe(2);
+        LoadLevelWipe(1);
     }
 
     public void LoadLevelWipe(int levelIndex)

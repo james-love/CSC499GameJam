@@ -1,4 +1,7 @@
+using System.Collections;
 using UnityEngine;
+using UnityEngine.AddressableAssets;
+using UnityEngine.ResourceManagement.AsyncOperations;
 using static UnityEngine.InputSystem.InputAction;
 
 public class RangeAttack : MonoBehaviour
@@ -27,6 +30,16 @@ public class RangeAttack : MonoBehaviour
             timeSinceLastAttack = 0f;
             playerAnim.SetTrigger("RangeAttack");
             // TODO Generate projectile using playerMovement.IsFacingRight
+            StartCoroutine(GenerateBullet(playerMovement.IsFacingRight ? 1f : -1f));
         }
+    }
+
+    private IEnumerator GenerateBullet(float direction)
+    {
+        AsyncOperationHandle<GameObject> opHandle = Addressables.LoadAssetAsync<GameObject>("Bullet");
+        yield return opHandle;
+
+        if (opHandle.Status == AsyncOperationStatus.Succeeded)
+            Instantiate(opHandle.Result, transform.position, Quaternion.identity).GetComponent<Bullet>().Direction = direction;
     }
 }
