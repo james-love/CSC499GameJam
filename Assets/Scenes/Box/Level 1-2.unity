@@ -768,7 +768,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5498269184960417737, guid: 71f942faf3512384c94069eab6feec2c, type: 3}
       propertyPath: goToScene
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5498269184960417737, guid: 71f942faf3512384c94069eab6feec2c, type: 3}
       propertyPath: goToSpawnPoint
