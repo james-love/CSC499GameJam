@@ -606,6 +606,7 @@ MonoBehaviour:
   currentHealth: 3
   healthSprite: {fileID: -1857837730, guid: 8693d7ec36558214fad9c9e6b6d3d3fe, type: 3}
   damagedSprite: {fileID: -577089293, guid: 8693d7ec36558214fad9c9e6b6d3d3fe, type: 3}
+  hurt: {fileID: 0}
   deathScreen: {fileID: 1895882510058919684}
 --- !u!223 &6664894199260416116
 Canvas:
@@ -852,7 +853,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &6664894199763561601
 RectTransform:
   m_ObjectHideFlags: 0
