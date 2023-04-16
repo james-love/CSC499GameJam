@@ -50,7 +50,7 @@ public class PlayerManager : MonoBehaviour
         for (int i = 0; i < maxHealth; i++)
         {
             Image temp = Instantiate(healthContainer, gameObject.transform);
-            temp.rectTransform.position = new Vector3(temp.rectTransform.position.x + 175 + (125 * i), temp.rectTransform.position.y, temp.rectTransform.position.z);
+            temp.rectTransform.position = new Vector3(temp.rectTransform.position.x + 225 + (80 * i), temp.rectTransform.position.y, temp.rectTransform.position.z);
             healthImages.Add(temp);
         }
 
